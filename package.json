@@ -10,7 +10,8 @@
   "repository": "",
   "author": "Andrew Cobby <andrew.cobby@gmail.com>",
   "license": "BSD",
-  "dependencies": {
-    "connect": "~2.7.2"
+  "dependencies": {},
+  "engines": {
+    "node": "0.8.18"
   }
 }
