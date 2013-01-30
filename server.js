@@ -19,4 +19,4 @@ http.createServer(function(req, res) {
       res.end(data);
     });
   });
-}).listen(3502);
+}).listen(process.env.PORT || 3502);
