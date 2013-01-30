@@ -1,6 +1,7 @@
 var http = require('http');
 var fs   = require('fs');
 var path = require('path');
+var rand = require('mersenne')
 
 http.createServer(function(req, res) {
   fs.readdir('./kittys', function(err, files) {
@@ -9,7 +10,7 @@ http.createServer(function(req, res) {
       return;
     }
 
-    var i   = Math.floor(Math.random() * files.length);
+    var i   = rand.rand(files.length);
     var img = files[i];
     var rs = fs.createReadStream('./kittys/' + img);
     rs.on('data', function(data) {

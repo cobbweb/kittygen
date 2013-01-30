@@ -10,7 +10,9 @@
   "repository": "",
   "author": "Andrew Cobby <andrew.cobby@gmail.com>",
   "license": "BSD",
-  "dependencies": {},
+  "dependencies": {
+    "mersenne": "0.0.3"
+  },
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
