@@ -12,12 +12,6 @@ http.createServer(function(req, res) {
 
     var i   = rand.rand(files.length);
     var img = files[i];
-    var rs = fs.createReadStream('./kittys/' + img);
-    rs.on('data', function(data) {
-      res.write(data);
-    });
-    rs.on('end', function(data) {
-      res.end(data);
-    });
+    fs.createReadStream('./kittys/' + img).pipe(res);
   });
 }).listen(process.env.PORT || 3502);
